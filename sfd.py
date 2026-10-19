@@ -27,7 +27,7 @@ def check_flag_secure(path: str):
                     method_index = i
                     method_line = v
             if const_index < method_index:
-                package_path_start = search_path.rfind('/') + 1
+                package_path_start = path.rfind('/') + 1
                 print(f"FLAG_SECURE set for {search_path[package_path_start:]} at location {path[package_path_start:]}"
                       f"\nLine n°{const_index}: {const_line}"
                       f"\nLine n°{method_index}: {method_line}")
@@ -36,5 +36,5 @@ def check_flag_secure(path: str):
 
 
 if __name__ == "__main__":
-    search_path = "/Users/lpernot/Library/CloudStorage/OneDrive-UniversitédeLausanne/02 - Academic/MSc/Serm_004/Semester Project/APK files/ch.migrosbank.android-1773147600"
+    search_path = "PATH TO UNPACKED APK HERE"
     check_flag_secure(search_path)
